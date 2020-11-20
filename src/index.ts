@@ -1,4 +1,4 @@
 import maskNric from './mask';
-import validateNric from './validate'
+import validateNric from './validate';
 
-export { maskNric ,validateNric};
+export { maskNric, validateNric };

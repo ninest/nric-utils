@@ -12,5 +12,5 @@ export default function validateMaskedNric(nric: string, firstLetter?: boolean):
   /**
   If first letter, validate that 0th and 4th chars are string
   */
-  // if (firstLetter && nric[0] + nric[4]) 
+  // if (firstLetter && nric[0] + nric[4])
 }
