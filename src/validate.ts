@@ -1,3 +1,5 @@
+import errorMessages from './error-messages';
+
 const weights: number[] = [2, 7, 6, 5, 4, 3, 2];
 
 const validFirstLetters: string[] = ['S', 'T', 'F', 'G'];
@@ -5,8 +7,9 @@ const lastLetterMap: { [index: string]: string[] } = {
   ST: ['J', 'Z', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'],
   FG: ['X', 'W', 'U', 'T', 'R', 'Q', 'P', 'N', 'M', 'L', 'K'],
 };
+const validLastLetters: string[] = [...lastLetterMap.ST, ...lastLetterMap.FG];
 
-export default function validateNric(nric: string): boolean {
+export default function validateNric(nric: string): boolean | Error {
   nric = nric.toUpperCase();
   const firstLetter = nric[0];
 
@@ -14,22 +17,21 @@ export default function validateNric(nric: string): boolean {
   Should be exactly 9 characters
   */
   if (nric.length != 9) {
-    return false;
+    throw new Error(errorMessages.NRIC_9_CHARACTERS);
+    // return false;
   }
 
   /*
-  First letter is valid
+  First and last characters are valid
   */
   if (!validFirstLetters.includes(firstLetter)) {
-    return false;
+    throw new Error(errorMessages.NRIC_FIRST_CHAR_INVALID);
+    // return false;
   }
 
-  /*
-  Last character should not be a number
-  */
-
-  if (parseInt(nric[8]) == NaN) {
-    return false;
+  if (!validLastLetters.includes(nric[8])) {
+    throw new Error(errorMessages.NRIC_LAST_CHAR_INVALID);
+    // return false;
   }
 
   const digits: number[] = nric.slice(1, 8).split('').map(Number);
@@ -68,11 +70,14 @@ export default function validateNric(nric: string): boolean {
   /*
   Find the last letter depending on the remainder
   */
-
   const lastLetter: string = lastLetterArray![remainder];
 
   /**
   Check if NRIC is valid
   */
-  return nric[8] == lastLetter;
+  if (nric[8] == lastLetter) {
+    return true;
+  } else {
+    throw new Error(errorMessages.NRIC_INVALID);
+  }
 }
