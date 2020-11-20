@@ -1,5 +1,6 @@
 const weights: number[] = [2, 7, 6, 5, 4, 3, 2];
 
+const validFirstLetters: string[] = ['S', 'T', 'F', 'G'];
 const lastLetterMap: { [index: string]: string[] } = {
   ST: ['J', 'Z', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'],
   FG: ['X', 'W', 'U', 'T', 'R', 'Q', 'P', 'N', 'M', 'L', 'K'],
@@ -8,6 +9,28 @@ const lastLetterMap: { [index: string]: string[] } = {
 export default function validateNric(nric: string): boolean {
   nric = nric.toUpperCase();
   const firstLetter = nric[0];
+
+  /*
+  Should be exactly 9 characters
+  */
+  if (nric.length != 9) {
+    return false;
+  }
+
+  /*
+  First letter is valid
+  */
+  if (!validFirstLetters.includes(firstLetter)) {
+    return false;
+  }
+
+  /*
+  Last character should not be a number
+  */
+
+  if (parseInt(nric[8]) == NaN) {
+    return false;
+  }
 
   const digits: number[] = nric.slice(1, 8).split('').map(Number);
 
@@ -50,6 +73,6 @@ export default function validateNric(nric: string): boolean {
 
   /**
   Check if NRIC is valid
-   */
+  */
   return nric[8] == lastLetter;
 }

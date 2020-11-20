@@ -86,3 +86,5 @@ Add script to `package.json`:
 ```
 "test": "jest --env=node",
 ```
+
+Use `npm run test -s` to disable NPM errors and creation of errors
