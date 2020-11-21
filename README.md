@@ -1,8 +1,17 @@
 <p align="center">
-  <img src="https://github.com/ninest/nric-utils/blob/master/assets/nric-multiple.svg" alt="IC Cards including the ugly green SAF one" width="175" >
+  <img src="https://raw.githubusercontent.com/ninest/nric-utils/master/assets/nric-multiple.svg" alt="IC Cards including the ugly green SAF one" width="175" >
 </p>
 <h1 align="center">NRIC Utils</h1>
 <p align="center">Functions to validate and mask Singapore NRICs</p>
+<p align="center">
+  <img src="https://img.shields.io/github/license/ninest/nric-utils?style=flat-square" alt="MIT" />
+
+  <img alt="npm" src="https://img.shields.io/npm/v/nric-utils?style=flat-square">
+
+  <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/nric-utils?style=flat-square">
+
+  <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/nric-utils?style=flat-square">
+</p>
 
 ## 💳 Docs
 
@@ -44,4 +53,4 @@ Run `npm run format` before commiting.
 MIT
 
 
-<img src="https://github.com/ninest/nric-utils/blob/master/assets/nric.svg" alt="Blue IC Card" width="150" >
+<img src="https://raw.githubusercontent.com/ninest/nric-utils/master/assets/nric.svg" alt="Blue IC Card" width="150" >

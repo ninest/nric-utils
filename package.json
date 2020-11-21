@@ -1,8 +1,8 @@
 {
   "name": "nric-utils",
   "version": "0.1.0",
-  "description": "",
-  "main": "lib/index.ts",
+  "description": "Functions to validate and mask Singapore NRICs",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --env=node",
@@ -15,6 +15,14 @@
   ],
   "author": "ninest",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ninest/nric-utils/issues"
+  },
+  "homepage": "https://github.com/ninest/nric-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninest/nric-utils.git"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.3",
     "@types/node": "^14.14.9",
