@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ninest/nric-utils/master/assets/nric-multiple.svg" alt="IC Cards including the ugly green SAF one" width="175" >
+  <img src="https://raw.githubusercontent.com/ninest/nric-utils/master/assets/nric-multiple.svg" alt="IC Cards including the ugly green one" width="175" >
 </p>
 <h1 align="center">NRIC Utils</h1>
 <p align="center">Functions to validate and mask Singapore NRICs</p>
@@ -46,7 +46,7 @@ npm run format
 npm run build
 ```
 
-Run `npm run format` before commiting.
+Format and ensure tests pass before pushing.
 
 ## 📜 License
 
