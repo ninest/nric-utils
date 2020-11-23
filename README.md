@@ -8,6 +8,8 @@
 
   <img alt="npm" src="https://img.shields.io/npm/v/nric-utils?style=flat-square">
 
+  <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/ninest/nric-utils/Run%20tests?style=flat-square">
+
   <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/nric-utils?style=flat-square">
 
   <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/nric-utils?style=flat-square">
