@@ -1,4 +1,7 @@
-export default function validateMaskedNric(nric: string, firstLetter?: boolean): boolean {
+export default function validateMaskedNric(
+  nric: string,
+  firstLetter?: boolean,
+): boolean {
   /*
   Validate size:
   - 4 characters (XXXA)

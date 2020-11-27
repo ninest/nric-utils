@@ -1,13 +1,11 @@
 import errorMessages from './error-messages';
 
-const weights: number[] = [2, 7, 6, 5, 4, 3, 2];
-
-const validFirstLetters: string[] = ['S', 'T', 'F', 'G'];
-const lastLetterMap: { [index: string]: string[] } = {
-  ST: ['J', 'Z', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'],
-  FG: ['X', 'W', 'U', 'T', 'R', 'Q', 'P', 'N', 'M', 'L', 'K'],
-};
-const validLastLetters: string[] = [...lastLetterMap.ST, ...lastLetterMap.FG];
+import {
+  weights,
+  validFirstLetters,
+  lastLetterMap,
+  validLastLetters,
+} from './constants';
 
 export default function validateNric(nric: string): boolean | Error {
   nric = nric.toUpperCase();
