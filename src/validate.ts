@@ -39,8 +39,7 @@ export default function validateNric(nric: string): boolean | Error {
   /*
   Find "weight" of NRIC: multiply each digit by its weight number
   - Multiple 1st by 2
-  - Multiple 2st by 7
-  and so on
+  - Multiple 2st by 7 and so on
   */
   let total: number = 0;
   digits.forEach((digit, index) => {
@@ -58,7 +57,7 @@ export default function validateNric(nric: string): boolean | Error {
   const remainder: number = total % 11;
 
   /*
-  Get last letter depending on the first letter
+  Get last letter depending on the first letter 
   */
   let lastLetterArray: string[];
   Object.keys(lastLetterMap).forEach((key: string) => {
