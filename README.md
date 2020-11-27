@@ -53,7 +53,7 @@ Format and ensure tests pass before pushing.
 ## 🚦 Roadmap
 - [x] Validate NRICs
 - [x] Mask NRICs
-- [ ] Validate masked NRICs
+- [x] Validate masked NRICs
 - [ ] Yup integration
   - [ ] Yup method for validating NRICs
   - [ ] Yup method for validating masked NRICs
@@ -61,7 +61,7 @@ Format and ensure tests pass before pushing.
 - [ ] Tests
   - [x] Tests for validating NRICs
   - [x] Tests for masking NRICs
-  - [ ] Tests for validating masked NRICs
+  - [x] Tests for validating masked NRICs
   - [ ] Tests for generating NRICs
 
 
